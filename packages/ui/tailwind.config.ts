@@ -1,10 +1,11 @@
-import type { Config } from "tailwindcss";
-import sharedConfig from "@repo/tailwind-config";
+import sharedConfig from "../config-tailwind/tailwind.config";
+import { Config } from "tailwindcss";
+import animatePlugin from "tailwindcss-animate";
 
-const config: Pick<Config, "prefix" | "presets" | "content"> = {
-  content: ["./src/**/*.tsx"],
-  prefix: "ui-",
-  presets: [sharedConfig],
+const config: Config = {
+  ...sharedConfig,
+  content: ["./src/**/*.{js,ts,jsx,tsx}"],
+  plugins: [animatePlugin],
 };
 
 export default config;

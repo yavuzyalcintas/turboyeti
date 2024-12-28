@@ -1,5 +1,5 @@
 /** @type {import("eslint").Linter.Config} */
 module.exports = {
   root: true,
-  extends: ["@repo/eslint-config/shadcn"],
-};
+  extends: ["@repo/eslint-config/vite"],
+}; 
